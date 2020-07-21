@@ -1,6 +1,6 @@
 .slide{
-    height:50vmin;
-    background-color: #f8f8f8;
+    height:60vmin;
+    background-color: #f0f0f0;
 }
 .slide .imageSide{
     height:100%;
@@ -39,13 +39,17 @@
     color:#4B38C5 !important;
 }
 
+.slide .imageSide .dataBox{
+    display:none
+}
+
 @media screen and (max-width: 767px) {
     .slide .dataSide{
         display:none;
     }
 
     .slide .imageSide{
-        height:50vmin;
+        height:60vmin;
     }
     .slide .imageSide .dataBox{
         width:100%;

@@ -1,0 +1,24 @@
+#datePickerButton button{
+    width:10vmin;
+    height:10vmin;
+
+    position:fixed;
+    bottom:3vmin;
+    right:3vmin;
+
+    background-color:#4B38C5;
+    color:#f8f8f8;
+    font-size:4vmin;
+
+    border:0px;
+    border-radius: 5vmin;
+    box-shadow:1px 2px 10px 1px rgba(0,0,0,0.5)
+}
+.inputBox{
+    widows: 50px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left:3vmin;
+    padding-right:3vmin;
+}

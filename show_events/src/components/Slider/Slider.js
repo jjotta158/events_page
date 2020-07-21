@@ -4,24 +4,23 @@ import moment from 'moment'
 import './style.css'
 
 const Slide = ({img, title, description, date}) => {
-    const clearImageName = (img) => img.replace("./", "")
-    const formateDate = (date) => moment(date).format("DD/MM/YYYY")
+    
 
     return (
         <Row className="slide">
-            <Col lg="4" md="3" sm="12">
-                <div style={{ backgroundImage: `url('${require('../../assets/images/' + clearImageName(img))}')`}} className="imageSide">
+            <Col lg="5" md="3" sm="12">
+                <div style={{ backgroundImage: `url('${require('../../assets/images/' + img)}')`}} className="imageSide">
                    <div className="dataBox">
                         <h2>{title}</h2>
-                        <span><span>{formateDate(date[0])}</span></span>
+                        <span><span>{date[0]}</span></span>
                    </div>
                 </div>
             </Col>
-            <Col lg="8" md="9" sm="0" xs="0">
+            <Col lg="7" md="9" sm="0" xs="0">
                 <div className="dataSide">
                     <h2>{title}</h2>
                     <p>{description}</p>
-                    <span><span>{formateDate(date[0])}</span></span>
+                    <span><span>{date[0]}</span></span>
                 </div>
             </Col>
         </Row>
@@ -39,11 +38,11 @@ const Slider = ({events}) => {
     events = selectImagesThatHaveImage(events)
     
     return (
-        <Carousel indicators={false}>
-            {events.map(event => {
+        <Carousel indicators={false} controls={false}>
+            {events.map((event, index) => {
                 return(
-                    <Carousel.Item>
-                        <Slide img={event.image} title={event.title} description={event.description} date={[event.start, event.end]}></Slide>
+                    <Carousel.Item key={index}>
+                        <Slide img={event.image} title={event.title} description={event.description} date={[event.startDate, event.endDate]}></Slide>
                     </Carousel.Item>
                 )
             })}
