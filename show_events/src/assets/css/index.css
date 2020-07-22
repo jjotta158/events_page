@@ -1,0 +1,18 @@
+body{
+  margin: 0;
+  background-color:#fbfbfb
+}
+#eventName {
+  margin:5vmin;
+}
+
+#eventName h2{
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 8vmin;
+  line-height: 70px;
+  text-align: center;
+
+  color: #2B1C8C;
+}

@@ -1,0 +1,27 @@
+footer div:first-child{
+    width:100%;
+    background-color:#4B38C5;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:10px;
+}
+footer div img{
+    width:15vmin;
+}
+footer div:last-child{
+    width:100%;
+    height:5vmin;
+    
+    display:flex;    
+    align-items: center;
+    justify-content:center;
+
+    background-color:#2B1C8C;
+    
+    color:#f8f8f8;
+    text-align:center;
+    font-family: Raleway;
+    font-size: 2.5vmin;
+    font-weight: bold;    
+}
