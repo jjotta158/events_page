@@ -1,6 +1,7 @@
 import {createStore} from 'redux'
-import moment from 'moment'
 import {events} from '../data/sample-data.json'
+
+import moment from 'moment'
 
 
 const clearImageName = (img) => img.replace("./", "")
@@ -16,25 +17,34 @@ const formattedEvents = events.map((event => {
 
 
 function makeEventsStore(state = formattedEvents, action) {
+    
+    const formatingDateToTimestamp = date => moment(date).format('X')
+
     switch (action.type) {
-        case 'SET_START_DATE':
-            
+        case 'SET_START_DATE':            
             return state.filter(event => {
-                if (moment(event.start).format('X') >= moment(action.start).format("X")) {
+
+                event.start = formatingDateToTimestamp(event.start)
+                action.start = formatingDateToTimestamp(action.start)
+
+                if (event.start >= action.start) {
                     return event;
                 }
             })
         case "SET_END_DATE":
             return state.filter(event => {
-                console.log(action)
-                if (event.end >= action.end) {
+
+                event.end = formatingDateToTimestamp(event.end)
+                action.end = formatingDateToTimestamp(action.end)
+
+                if (event.end <= action.end) {
                     return event;
                 }
             })
         case "CLEAN_DATES":
             return formattedEvents
         default:
-            return events
+            return state
     }
 }
 

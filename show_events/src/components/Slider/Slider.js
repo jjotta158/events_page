@@ -3,21 +3,20 @@ import { Carousel, Row, Col } from 'react-bootstrap'
 import moment from 'moment'
 import './style.css'
 
-const Slide = ({img, title, description, date}) => {
-    
+const Slide = ({img, title, description, date}) => {    
 
     return (
         <Row className="slide">
             <Col lg="5" md="3" sm="12">
-                <div style={{ backgroundImage: `url('${require('../../assets/images/' + img)}')`}} className="imageSide">
-                   <div className="dataBox">
+                <div style={{ backgroundImage: `url('${require('../../assets/images/' + img)}')`}} className="image-side">
+                   <div className="data-box">
                         <h2>{title}</h2>
                         <span><span>{date[0]}</span></span>
                    </div>
                 </div>
             </Col>
             <Col lg="7" md="9" sm="0" xs="0">
-                <div className="dataSide">
+                <div className="data-side">
                     <h2>{title}</h2>
                     <p>{description}</p>
                     <span><span>{date[0]}</span></span>
@@ -35,6 +34,7 @@ const Slider = ({events}) => {
             }
         })       
     }
+    
     events = selectImagesThatHaveImage(events)
     
     return (

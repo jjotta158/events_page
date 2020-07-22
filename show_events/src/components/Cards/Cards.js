@@ -12,10 +12,10 @@ const Card = ({img, title, date}) => {
 
     return(
         <div className="Card">
-            <div className="imageBox" style={{ backgroundImage: `url(${require("../../assets/images/" + img)})`}}>
+            <div className="image-box" style={{ backgroundImage: `url(${require("../../assets/images/" + img)})`}}>
 
             </div>
-            <div className="dataBox">
+            <div className="data-box">
                 <h3>{title}</h3>
                 <span><span>{date.start}</span> - <span>{date.end}</span></span>
             </div>

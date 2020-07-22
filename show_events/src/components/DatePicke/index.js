@@ -35,11 +35,11 @@ const DatePicker = () => {
                     <Modal.Title>Escolha Qual O Intervalo de Datas Você Desja</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <div className="inputBox">
+                    <div className="input-box">
                         <label for="startDate" className="dateInputLabel">Data Inicial </label>
                         <input type="date" onChange={(e) => setDateInitial(e.timeStamp)} name="startDate"></input>
                     </div>
-                    <div className="inputBox">
+                    <div className="input-box">
                         <label for="endDate" className="dateInputLabel">Data Final </label>
                         <input type="date" onChange ={(e) => setDateFinish(e.timeStamp)} name="endDate"></input>
                     </div>

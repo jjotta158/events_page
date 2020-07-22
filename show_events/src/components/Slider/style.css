@@ -2,12 +2,12 @@
     height:60vmin;
     background-color: #f0f0f0;
 }
-.slide .imageSide{
+.slide .image-side{
     height:100%;
     background-position: center;
     background-size: cover;
 }
-.slide .dataSide{
+.slide .data-side{
     height:100%;
     display: flex;
     flex-direction: column;
@@ -15,57 +15,61 @@
     align-items:flex-start;
 }
 
-.slide .dataSide  h2{
+.slide .data-side  h2{
     font-size:5vmin;
     font-weight: bolder;
     font-family: Raleway;
     color:#4B38C5;
 }
-.slide .dataSide p {
+.slide .data-side p {
+    width:30vmin;
+
     font-size:2vmin;
     font-family: Raleway;
     font-weight: 500;
-    width:30vmin;
 }
 
-.slide .dataSide span {
+.slide .data-side span {
+    width: 30vmin;
+
     font-size: 3vmin;
     font-weight:bold;
     font-family: Raleway;
-    width: 30vmin;
     color:#4B38C5;
 }
 .carousel-control-prev-icon {
     color:#4B38C5 !important;
 }
 
-.slide .imageSide .dataBox{
+.slide .image-side .data-box{
     display:none
 }
 
 @media screen and (max-width: 767px) {
-    .slide .dataSide{
+    .slide .data-side{
         display:none;
     }
 
-    .slide .imageSide{
+    .slide .image-side{
         height:60vmin;
     }
-    .slide .imageSide .dataBox{
+    .slide .image-side .data-box{
         width:100%;
         height:100%;
+
         background-color:rgba(0, 0, 0, 0.5);
+        
         display: flex;
         justify-content:center;
         align-items:center;
         flex-direction:column
     }
-    .slide .imageSide h2{
+    .slide .image-side h2{
         color:#f8f8f8;
         font-size:7vmin;
         text-shadow: 3px 4px rgba(50, 38, 94, 0.7);
     }
-    .slide .imageSide span {
+    .slide .image-side span {
         color: #f8f8f8;
         font-size: 4vmin;
         text-shadow: 3px 4px rgba(50, 38, 94, 0.7);
